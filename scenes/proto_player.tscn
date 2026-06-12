@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dux1764ma8eky"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/brackeys-proto-controller-main/proto_controller/proto_controller.tscn" id="1_e0e85"]
+[ext_resource type="Script" uid="uid://dn5u6iv7p6eql" path="res://addons/brackeys-proto-controller-main/proto_controller/proto_controller.gd" id="2_kmr52"]
+
+[node name="ProtoPlayer" type="Node3D" unique_id=1918752549]
+
+[node name="ProtoController" parent="." unique_id=2075185685 instance=ExtResource("1_e0e85")]
+script = ExtResource("2_kmr52")
+input_left = "move_left"
+input_right = "move_right"
+input_forward = "move_forward"
+input_back = "move_backward"
+input_jump = "jump"
