@@ -11,6 +11,7 @@ sky_material = SubResource("ProceduralSkyMaterial_bpt1m")
 
 [sub_resource type="Environment" id="Environment_mofoo"]
 background_mode = 2
+background_energy_multiplier = 0.05
 sky = SubResource("Sky_4lj41")
 tonemap_mode = 2
 glow_enabled = true
@@ -22,10 +23,17 @@ environment = SubResource("Environment_mofoo")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2008288882]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -0.1542511, -0.2759223, 0.37469673)
+light_color = Color(0.06731294, 0.01840763, 0.25394145, 1)
+light_energy = 0.25
 shadow_enabled = true
 
 [node name="ProtoController" parent="." unique_id=1549842563 instance=ExtResource("1_bpt1m")]
 transform = Transform3D(-0.83347136, 0, 0.55256265, 0, 1, 0, -0.55256265, 0, -0.83347136, 24.09201, 0.5320252, -23.754978)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2138409845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.21384, 2.6596115, -18.887867)
+light_color = Color(0.8735878, 0.6491372, 0.35776335, 1)
+omni_range = 1.25
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1119241862]
 use_collision = true
@@ -50,3 +58,32 @@ size = Vector3(50.008125, 10.865112, 0.22070313)
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1494794887]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -24.872272, 5.941249, 0.24102497)
 size = Vector3(50.008125, 10.861816, 0.22070313)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1172843453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 2.0249474, -14.2854)
+size = Vector3(12, 4, 0.42919922)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D5" unique_id=346471562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5615463, -0.79166937, 0.21224976)
+operation = 2
+size = Vector3(1.4327393, 2.636963, 1.2460938)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D5" unique_id=1966715361]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -2.554617, 0.5302062, 0.13571262)
+operation = 2
+radius = 0.72509766
+height = 2.49292
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1081622571]
+transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 13.733255, 2.0296519, -20.461525)
+size = Vector3(12, 4, 0.42919922)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=617345941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19791222, 5.293909, -0.05178237)
+radius = 1.8764648
+height = 9.757004
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1702858896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.75803, 2.577525, -14.814665)
+light_color = Color(0.8735878, 0.6491372, 0.35776335, 1)
+omni_range = 1.25
