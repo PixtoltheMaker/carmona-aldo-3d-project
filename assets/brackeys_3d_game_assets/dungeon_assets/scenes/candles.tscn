@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b01ft6ot08ca5"]
+
+[ext_resource type="PackedScene" uid="uid://iqq4bft1c0mr" path="res://assets/brackeys_3d_game_assets/dungeon_assets/props/candles.glb" id="1_080va"]
+
+[node name="Candles" type="Node3D" unique_id=1016320758]
+
+[node name="candles" parent="." unique_id=1431590841 instance=ExtResource("1_080va")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1514618970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.9, 0.05)
+light_color = Color(0.96477205, 0.55540216, 0.26180583, 1)

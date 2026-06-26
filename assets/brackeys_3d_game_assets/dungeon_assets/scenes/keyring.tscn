@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cm11rhaqlluxd"]
+
+[ext_resource type="PackedScene" uid="uid://bg7i8qw1xddjo" path="res://assets/brackeys_3d_game_assets/dungeon_assets/props/keyring.glb" id="1_glaut"]
+
+[node name="Keyring" type="Node3D" unique_id=416699674]
+
+[node name="keyring2" parent="." unique_id=1423675930 instance=ExtResource("1_glaut")]

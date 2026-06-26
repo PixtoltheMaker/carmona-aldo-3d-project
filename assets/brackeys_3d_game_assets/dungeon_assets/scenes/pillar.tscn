@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cdlhtvhki82q"]
+
+[ext_resource type="PackedScene" uid="uid://bphkyitrps8ok" path="res://assets/brackeys_3d_game_assets/dungeon_assets/building/pillar.glb" id="1_a3tsv"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hpdjn"]
+height = 3.9875002
+radius = 0.6
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8gw3s"]
+height = 0.27187502
+radius = 0.8
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lh22g"]
+height = 0.53593755
+radius = 0.8
+
+[node name="Pillar" type="StaticBody3D" unique_id=195893630]
+
+[node name="pillar2" parent="." unique_id=1850346255 instance=ExtResource("1_a3tsv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1254951354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0187502, 0)
+shape = SubResource("CylinderShape3D_hpdjn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=277821991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16093755, 0)
+shape = SubResource("CylinderShape3D_8gw3s")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=5456208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7289064, 0)
+shape = SubResource("CylinderShape3D_lh22g")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://di0h8lwtymlcu"]
+
+[ext_resource type="PackedScene" uid="uid://dcp7eehrd7rvj" path="res://assets/brackeys_3d_game_assets/dungeon_assets/building/wall_half_endcap.glb" id="1_vvx3r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3jbnt"]
+size = Vector3(1.7, 4, 0.65000004)
+
+[node name="Wall_Half_Endcap" type="StaticBody3D" unique_id=483914585]
+
+[node name="wall_half_endcap2" parent="." unique_id=1200396682 instance=ExtResource("1_vvx3r")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=78467149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 2, -0.025000006)
+shape = SubResource("BoxShape3D_3jbnt")
