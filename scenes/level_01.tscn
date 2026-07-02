@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://b01ft6ot08ca5" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/candles.tscn" id="15_cy6r3"]
 [ext_resource type="PackedScene" uid="uid://chtykyolgr5x" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/coin_stack.tscn" id="15_oy082"]
 [ext_resource type="PackedScene" uid="uid://bkqekdqupd2al" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/chair.tscn" id="16_a577o"]
+[ext_resource type="PackedScene" uid="uid://chw4i5dwk6d62" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/dark_spire.tscn" id="18_w4cok"]
 [ext_resource type="PackedScene" uid="uid://bnpedrxyj1w7k" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/chest_gold.tscn" id="21_ne2m8"]
 [ext_resource type="PackedScene" uid="uid://cm11rhaqlluxd" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/keyring.tscn" id="22_l0wem"]
 [ext_resource type="PackedScene" uid="uid://d0ronhknvuamo" path="res://assets/brackeys_3d_game_assets/dungeon_assets/scenes/table_medium.tscn" id="23_luive"]
@@ -36,7 +37,7 @@ sky_material = SubResource("PanoramaSkyMaterial_mofoo")
 
 [sub_resource type="Environment" id="Environment_mofoo"]
 background_mode = 2
-background_energy_multiplier = 0.5
+background_energy_multiplier = 0.7
 sky = SubResource("Sky_4lj41")
 tonemap_mode = 2
 glow_enabled = true
@@ -49,7 +50,7 @@ environment = SubResource("Environment_mofoo")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2008288882]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -0.1542511, -0.2759223, 0.37469673)
 light_color = Color(0.06731294, 0.01840763, 0.25394145, 1)
-light_energy = 0.25
+light_energy = 0.3
 shadow_enabled = true
 
 [node name="ProtoController" parent="." unique_id=1549842563 instance=ExtResource("1_bpt1m")]
@@ -59,7 +60,8 @@ transform = Transform3D(-0.83347136, 0, 0.55256265, 0, 1, 0, -0.55256265, 0, -0.
 
 [node name="Phantom Light" type="OmniLight3D" parent="lighting" unique_id=1119852106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.021881, 0)
-light_energy = 5.0
+light_color = Color(0.1081999, 0.03793299, 0.005124953, 1)
+light_energy = 1000.0
 light_negative = true
 omni_range = 15.685655
 
@@ -792,8 +794,8 @@ transform = Transform3D(0.3526267, 0, -0.7150004, 0.008532308, 0.7967315, 0.2409
 
 [node name="Pillars" type="Node" parent="Walls and Decoration" unique_id=517583242]
 
-[node name="Pillar" parent="Walls and Decoration/Pillars" unique_id=195893630 instance=ExtResource("13_2ucnx")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.3000001, 0)
+[node name="Dark Spire" parent="Walls and Decoration/Pillars" unique_id=1116758950 instance=ExtResource("18_w4cok")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 5.1000004, 0)
 
 [node name="Pillar2" parent="Walls and Decoration/Pillars" unique_id=359274896 instance=ExtResource("13_2ucnx")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -18.800001, -6.1000004, 0.5)

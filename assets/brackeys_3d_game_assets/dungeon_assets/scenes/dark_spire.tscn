@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://chw4i5dwk6d62"]
+
+[ext_resource type="PackedScene" uid="uid://c735143r02sw1" path="res://assets/Meshes/Dark_Spire.glb" id="1_dilyf"]
+
+[node name="Dark Spire" type="Node3D" unique_id=1116758950]
+
+[node name="Dark_Spire" parent="." unique_id=1015271232 instance=ExtResource("1_dilyf")]
